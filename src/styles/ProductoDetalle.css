@@ -1,0 +1,47 @@
+/* Estilos de cards de categoría */
+.producto-detalle-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.producto-detalle-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+.producto-img {
+  width: 100%;
+  height: auto; 
+  max-height: 400px; 
+  object-fit: contain; 
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+  background-color: #f9f9f9; 
+}
+
+
+.producto-detalle-card:hover .producto-img {
+  transform: scale(1.05);
+}
+
+.producto-info {
+  padding: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .producto-img {
+    max-height: 250px;
+  }
+
+  .producto-info {
+    text-align: center;
+  }
+}
+
+

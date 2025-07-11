@@ -1,0 +1,175 @@
+/* ---------- CONTENEDOR Y ENCABEZADO ---------- */
+.carrito-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.subtitulo-carrito {
+  text-align: center;
+  color: black;
+  margin-top: 20px;
+  font-size: 2rem;
+  width: 100%;
+}
+
+/* ---------- CARRITO VACÍO ---------- */
+.carrito-vacio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 30%;
+  margin: 10px;
+  border: 3px solid rgb(141, 214, 222);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.carrito-vacio p {
+  text-align: center;
+}
+
+/* ---------- CARDS DE PRODUCTOS ---------- */
+.carrito-card {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: box-shadow 0.2s;
+}
+
+.carrito-card:hover {
+  box-shadow: none;
+}
+
+.carrito-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .carrito-card-content {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.carrito-image {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .carrito-image {
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+}
+
+/* ---------- BOTONES DE CANTIDAD ---------- */
+.boton-restar,
+.boton-sumar {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.boton-restar {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.boton-restar:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.boton-sumar {
+  background-color: white;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+}
+
+.boton-sumar:hover {
+  background-color: #e6fafd;
+}
+
+/* ---------- BOTÓN ELIMINAR ---------- */
+.boton-carrito {
+  background-color: #dc3545;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  min-width: 80px;
+  transition: background-color 0.2s ease;
+}
+
+.boton-carrito:hover {
+  background-color: #c82333;
+}
+
+/* ---------- RESUMEN DE COMPRA ---------- */
+.carrito-resumen-card {
+  background-color: #d8dde8; 
+  color: black;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db; 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+/* ---------- BOTÓN PAGAR ---------- */
+.btn-celeste {
+  display: inline-block;
+  background-color: #0076c7;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-celeste:hover {
+  background-color: #0881d1;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 576px) {
+  .carrito-card {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .carrito-resumen-card {
+    padding: 1rem;
+  }
+}
